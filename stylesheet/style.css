@@ -48,6 +48,8 @@ html {
 
 body {
 	color: #855B69;
+	overflow-x: hidden;
+
 }
 
 .people
