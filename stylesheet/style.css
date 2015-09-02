@@ -43,7 +43,7 @@
 /* general styling */
 
 html {
-	font-family: 'Caecilia', Arial, sans-serif;
+	font-family: 'Caecilia', 'Roboto Slab', serif;
 }
 
 body {
@@ -195,7 +195,7 @@ button {
 .overlay ul li a, .landing ul li a {
 	font-size: 30px;
 	color: #FFCCCC;
-	font-family:"Caecilia";
+	font-family:"Caecilia", 'Roboto Slab', serif;
 	font-weight: normal;
 	font-style: italic;
 	display: block;
