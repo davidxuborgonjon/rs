@@ -1,0 +1,257 @@
+@font-face {
+	font-family: 'Caecilia';
+	src: url('caecilialtstd-roman.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Caecilia';
+	src: url('caecilialtstd-italic.otf') format('opentype');
+	font-weight: normal;
+	font-style: italic;
+}
+@font-face {
+	font-family: 'Caecilia';
+	src: url('caecilialtstd-bold.otf') format('opentype');
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Caecilia';
+	src: url('caecilialtstd-bolditalic.otf') format('opentype');
+	font-weight: bold;
+	font-style: italic;
+}
+@font-face {
+	font-family: 'Officina';
+	src: url('OfficinaSerifStd-Book.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Officina';
+	src: url('OfficinaSerifStd-BookItalic.otf') format('opentype');
+	font-weight: normal;
+	font-style: italic;
+}
+
+
+*, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.clearfix:before, .clearfix:after { content: ''; display: table; }
+.clearfix:after { clear: both; }
+
+/* general styling */
+
+html {
+	font-family: 'Caecilia', Arial, sans-serif;
+}
+
+body {
+	color: #855B69;
+}
+
+.people
+{
+	background-image: url("../assets/people.jpg");
+	background-size: cover;
+	background-color: #FE958F;
+}
+.events {
+	background-image: url("../assets/space.jpg");
+	background-size: cover;
+		background-color: #FE958F;
+}
+
+.show {
+	background-image: url("../assets/sport.jpg");
+	background-size: cover;
+		background-color: #FE958F;
+
+}
+
+.statement {
+	background-image: url("../assets/factory.jpg");
+	background-size: cover;
+		background-color: #FE958F;
+}
+
+/*dark violet #270A33*/
+
+a {
+	color: #500011;
+	text-decoration: none;
+	outline: none;
+}
+
+a:hover {
+	color: #FBB829;
+}
+
+.hide {
+	display: none;
+}
+
+.expand {
+	font-weight:bold;
+	font-size: 18px;
+/*	text-transform: uppercase;
+*/	padding:1% 9% 1% 7%;
+}
+
+.expansion {
+	display:none;
+	padding:1% 11% 1% 10%;
+}
+
+/* overlay styling */
+
+
+button {
+	padding: 2%;
+	margin: 5% 80% 5%;
+	width: 120px;
+	height: 120px;
+	background:url('../assets/question.png') no-repeat center center;
+	border: none;
+	outline: none;
+}
+
+/*section {
+	padding: 3em 2em 5em;
+	text-align: right;
+	font-size: 1.5em;
+}*/
+
+/* Overlay style */
+.overlay, .landing{
+	text-align: center;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: #E13138;
+}
+
+.landing {
+	top:13%;
+	height:60%;
+}
+/* Overlay closing cross */
+.overlay .overlay-close {
+	width: 120px;
+	height: 120px;
+	padding: 2%;
+	margin: 6% 80% 5%;
+	overflow: hidden;
+	border: none;
+	background: url('../assets/exclamation.png') no-repeat center center;
+/*	color: transparent;*/
+	z-index: 100;
+}
+
+/* Menu style */
+.overlay nav {
+	text-align: center;
+	position: relative;
+	top: 20%;
+	height: 60%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.overlay p, .landing p {
+	font-family: "Officina";
+	font-size: 40px;
+	padding-bottom: 20px;
+}
+
+.overlay p a, .landing p a {
+	text-decoration: none;
+	color: #FFCCCC;
+}
+
+.overlay p a:hover, .landing p a:hover {
+	color: #FBB829;
+}
+
+.overlay ul, .landing ul {
+	color: #FFCCCC;
+	list-style: none;
+	padding: 0;
+	margin: 0 auto;
+	display: inline-block;
+	height: 100%;
+	position: relative;
+}
+
+.overlay ul li, .landing ul li {
+	display: block;
+	height: 10%;
+	height: calc(100% / 6);
+*/	min-height: 10px;
+}
+
+.overlay ul li a, .landing ul li a {
+	font-size: 30px;
+	color: #FFCCCC;
+	font-family:"Caecilia";
+	font-weight: normal;
+	font-style: italic;
+	display: block;
+	-webkit-transition: color 0.2s;
+	transition: color 0.2s;
+}
+
+.overlay ul li a:hover, .landing ul li a:hover {
+	color: #FBB829;
+}
+
+/* Effects */
+.overlay-hugeinc {
+	opacity: 0;
+	visibility: hidden;
+	-webkit-transition: opacity 0.7s, visibility 0s 0.7s;
+	transition: opacity 0.7s, visibility 0s 0.7s;
+}
+
+.overlay-hugeinc.open {
+	opacity: 0.95;
+	visibility: visible;
+	-webkit-transition: opacity 0.7s;
+	transition: opacity 0.7s;
+}
+
+.overlay-hugeinc nav {
+	-webkit-perspective: 1200px;
+	perspective: 1200px;
+}
+
+.overlay-hugeinc nav ul {
+	opacity: 0.4;
+	-webkit-transform: translateY(-25%) rotateX(35deg);
+	transform: translateY(-25%) rotateX(35deg);
+	-webkit-transition: -webkit-transform 0.7s, opacity 0.7s;
+	transition: transform 0.7s, opacity 0.7s;
+}
+
+.overlay-hugeinc.open nav ul {
+	opacity: 1;
+	-webkit-transform: rotateX(0deg);
+	transform: rotateX(0deg);
+}
+
+.overlay-hugeinc.close nav ul {
+	-webkit-transform: translateY(25%) rotateX(-35deg);
+	transform: translateY(25%) rotateX(-35deg);
+}
+
+@media screen and (max-height: 30.5em) {
+	.overlay nav {
+		height: 70%;
+		font-size: 34px;
+	}
+	.overlay ul li {
+		min-height: 34px;
+	}
+}
