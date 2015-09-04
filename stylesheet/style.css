@@ -171,11 +171,12 @@ button {
 p.info {
 	font-size: 20px;
 	text-decoration: none;
+	color: #FEBF97;
 }
 
 .overlay p a, .landing p a {
 	text-decoration: none;
-	color: #F0CCCC;
+	color: #FFCCCC;
 }
 
 .overlay p a:hover, .landing p a:hover {
