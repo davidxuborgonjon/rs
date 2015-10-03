@@ -1,36 +1,36 @@
 @font-face {
-	font-family: 'Caecilia';
-	src: url('CaeciliaLTStd-Roman.otf') format('opentype');
+	font-family: "Caecilia";
+	src: url("CaeciliaLTStd-Roman.otf") format("opentype");
 	font-weight: normal;
 	font-style: normal;
 }
 @font-face {
-	font-family: 'Caecilia';
-	src: url('CaeciliaLTStd-Italic.otf') format('opentype');
+	font-family: "Caecilia";
+	src: url("CaeciliaLTStd-Italic.otf") format("opentype");
 	font-weight: normal;
 	font-style: italic;
 }
 @font-face {
-	font-family: 'Caecilia';
-	src: url('CaeciliaLTStd-Bold.otf') format('opentype');
+	font-family: "Caecilia";
+	src: url("CaeciliaLTStd-Bold.otf") format("opentype");
 	font-weight: bold;
 	font-style: normal;
 }
 @font-face {
-	font-family: 'Caecilia';
-	src: url('CaeciliaLTStd-BoldItalic.otf') format('opentype');
+	font-family: "Caecilia";
+	src: url("CaeciliaLTStd-BoldItalic.otf") format("opentype");
 	font-weight: bold;
 	font-style: italic;
 }
 @font-face {
-	font-family: 'Officina';
-	src: url('OfficinaSerifStd-Book.otf') format('opentype');
+	font-family: "Officina";
+	src: url("OfficinaSerifStd-Book.otf") format("opentype");
 	font-weight: normal;
 	font-style: normal;
 }
 @font-face {
-	font-family: 'Officina';
-	src: url('OfficinaSerifStd-BookItalic.otf') format('opentype');
+	font-family: "Officina";
+	src: url("OfficinaSerifStd-BookItalic.otf") format("opentype");
 	font-weight: normal;
 	font-style: italic;
 }
@@ -38,7 +38,7 @@
 /* general styling */
 
 html {
-	font-family: 'Caecilia', 'Roboto Slab', serif;
+	font-family: "Caecilia", "Roboto Slab", serif;
 	cursor: help;
 }
 
@@ -96,6 +96,14 @@ a:hover {
 */	padding:1% 9% 1% 7%;
 }
 
+.expand:hover { 
+    color: #FEBF97;
+}
+
+.done {
+	color:#ab7c8f;
+}
+
 .expansion {
 	display:none;
 	padding:1% 11% 1% 10%;
@@ -109,7 +117,7 @@ button {
 	margin: 5% 80% 5%;
 	width: 120px;
 	height: 120px;
-	background:url('../assets/question.png') no-repeat center center;
+	background:url("../assets/question.png") no-repeat center center;
 	border: none;
 	outline: none;
 	cursor: crosshair;
@@ -144,7 +152,7 @@ button {
 	margin: 6% 80% 5%;
 	overflow: hidden;
 	border: none;
-	background: url('../assets/exclamation.png') no-repeat center center;
+	background: url("../assets/exclamation.png") no-repeat center center;
 /*	color: transparent;*/
 	z-index: 100;
 }
@@ -200,7 +208,7 @@ p.info {
 .overlay ul li a, .landing ul li a {
 	font-size: 30px;
 	color: #FFCCCC;
-	font-family:"Caecilia", 'Roboto Slab', serif;
+	font-family:"Caecilia", "Roboto Slab", serif;
 	font-weight: normal;
 	font-style: italic;
 	display: block;
@@ -260,8 +268,6 @@ p.info {
 		min-height: 34px;
 	}
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 #slider {
   position: relative;
@@ -329,7 +335,3 @@ a.control_next {
 }
 
 
-=======
->>>>>>> parent of 67a53d0... first update
-=======
->>>>>>> parent of 67a53d0... first update
