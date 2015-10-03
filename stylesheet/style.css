@@ -39,8 +39,8 @@
 
 html {
 	font-family: "Caecilia", "Roboto Slab", serif;
-/*	cursor: help;
-*/}
+	cursor: help;
+}
 
 body {
 	color: #855B69;
@@ -79,6 +79,7 @@ a {
 	color: #500011;
 	text-decoration: none;
 	outline: none;
+	cursor: crosshair;
 }
 
 a:hover {
@@ -112,16 +113,15 @@ a:hover {
 /* overlay styling */
 
 
-button {
+a img {
 	padding: 0%;
 	margin: 5% 80% 5%;
 	width: 120px;
 	height: 120px;
-	background:url("../assets/question.png") no-repeat center center;
 	border: none;
 	outline: none;
-/*	cursor: crosshair;
-*/}
+}
+
 
 /*section {
 	padding: 3em 2em 5em;
@@ -130,7 +130,7 @@ button {
 }*/
 
 /* Overlay style */
-.overlay, .landing{
+.landing{
 	text-align: center;
 	position: fixed;
 	width: 100%;
@@ -157,38 +157,31 @@ button {
 	z-index: 100;
 }
 
-/* Menu style */
-.overlay nav {
-	text-align: center;
-	position: relative;
-	top: 15%;
-	height: 60%;
-	-webkit-transform: translateY(-50%);
-	transform: translateY(-50%);
-}
 
-.overlay p, .landing p {
+.landing p {
 	font-family: "Officina";
 	font-size: 40px;
-	padding-bottom: 5px;
+	padding-bottom: 2px;
 }
 
 p.info {
 	font-size: 20px;
 	text-decoration: none;
 	color: #FEBF97;
+	text-align: center;
+	margin: 0px 20%;
 }
 
-.overlay p a, .landing p a {
+.landing p a {
 	text-decoration: none;
 	color: #FFCCCC;
 }
 
-.overlay p a:hover, .landing p a:hover {
+.landing p a:hover {
 	color: #FBB829;
 }
 
-.overlay ul, .landing ul {
+.landing ul {
 	color: #FFCCCC;
 	list-style: none;
 	padding: 0;
@@ -198,66 +191,27 @@ p.info {
 	position: relative;
 }
 
-.overlay ul li, .landing ul li {
+.landing ul li {
 	display: block;
 	height: 10%;
-	height: calc(100% / 6);
+	height: auto);
 */	min-height: 10px;
 }
 
-.overlay ul li a, .landing ul li a {
+.landing ul li a {
 	font-size: 30px;
 	color: #FFCCCC;
 	font-family:"Caecilia", "Roboto Slab", serif;
 	font-weight: normal;
 	font-style: italic;
 	display: block;
-	-webkit-transition: color 0.2s;
-	transition: color 0.2s;
 }
 
-.overlay ul li a:hover, .landing ul li a:hover {
+.landing ul li a:hover {
 	color: #FBB829;
 }
 
 /* Effects */
-.overlay-hugeinc {
-	opacity: 0;
-	visibility: hidden;
-	-webkit-transition: opacity 0.7s, visibility 0s 0.7s;
-	transition: opacity 0.7s, visibility 0s 0.7s;
-}
-
-.overlay-hugeinc.open {
-	opacity: 0.95;
-	visibility: visible;
-	-webkit-transition: opacity 0.7s;
-	transition: opacity 0.7s;
-}
-
-.overlay-hugeinc nav {
-	-webkit-perspective: 1200px;
-	perspective: 1200px;
-}
-
-.overlay-hugeinc nav ul {
-	opacity: 0.4;
-	-webkit-transform: translateY(-25%) rotateX(35deg);
-	transform: translateY(-25%) rotateX(35deg);
-	-webkit-transition: -webkit-transform 0.7s, opacity 0.7s;
-	transition: transform 0.7s, opacity 0.7s;
-}
-
-.overlay-hugeinc.open nav ul {
-	opacity: 1;
-	-webkit-transform: rotateX(0deg);
-	transform: rotateX(0deg);
-}
-
-.overlay-hugeinc.close nav ul {
-	-webkit-transform: translateY(25%) rotateX(-35deg);
-	transform: translateY(25%) rotateX(-35deg);
-}
 
 @media screen and (max-height: 30.5em) {
 	.overlay nav {
@@ -310,8 +264,8 @@ p.info {
   font-weight: 600;
   font-size: 20px;
   opacity: 0;
-/*  cursor: crosshair;
-*/}
+  cursor: crosshair;
+}
 
 /*a.control_prev:hover,*/ a.control_next:hover {
   opacity: 0;
