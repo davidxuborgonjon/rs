@@ -18,7 +18,7 @@
 
 ( function( window ) {
 
-"use strict";
+'use strict';
 
 // class helper functions from bonzo https://github.com/ded/bonzo
 
@@ -30,7 +30,7 @@ function classReg( className ) {
 // altho to be fair, the api sucks because it won"t accept multiple classes at once
 var hasClass, addClass, removeClass;
 
-if ( "classList" in document.documentElement ) {
+if ( 'classList' in document.documentElement ) {
   hasClass = function( elem, c ) {
     return elem.classList.contains( c );
   };
@@ -47,11 +47,11 @@ else {
   };
   addClass = function( elem, c ) {
     if ( !hasClass( elem, c ) ) {
-      elem.className = elem.className + " " + c;
+      elem.className = elem.className + ' ' + c;
     }
   };
   removeClass = function( elem, c ) {
-    elem.className = elem.className.replace( classReg( c ), " " );
+    elem.className = elem.className.replace( classReg( c ), ' ' );
   };
 }
 
@@ -74,7 +74,7 @@ var classie = {
 };
 
 // transport
-if ( typeof define === "function" && define.amd ) {
+if ( typeof define === 'function' && define.amd ) {
   // AMD
   define( classie );
 } else {
@@ -85,17 +85,17 @@ if ( typeof define === "function" && define.amd ) {
 })( window );
 
 (function() {
-  var triggerBttn = document.getElementById( "trigger-overlay" ),
-    overlay = document.querySelector( "div.overlay" ),
-    closeBttn = overlay.querySelector( "button.overlay-close" );
+  var triggerBttn = document.getElementById( 'trigger-overlay' ),
+    overlay = document.querySelector( 'div.overlay' ),
+    closeBttn = overlay.querySelector( 'button.overlay-close' );
     transEndEventNames = {
-      "WebkitTransition": "webkitTransitionEnd",
-      "MozTransition": "transitionend",
-      "OTransition": "oTransitionEnd",
-      "msTransition": "MSTransitionEnd",
-      "transition": "transitionend"
+      'WebkitTransition': 'webkitTransitionEnd',
+      'MozTransition': 'transitionend',
+      'OTransition': 'oTransitionEnd',
+      'msTransition': 'MSTransitionEnd',
+      'transition': 'transitionend'
     },
-    transEndEventName = transEndEventNames[ Modernizr.prefixed( "transition" ) ],
+    transEndEventName = transEndEventNames[ Modernizr.prefixed( 'transition' ) ],
     support = { transitions : Modernizr.csstransitions };
 
   function toggleOverlay() {
@@ -104,10 +104,10 @@ if ( typeof define === "function" && define.amd ) {
       classie.add( overlay, "close" );
       var onEndTransitionFn = function( ev ) {
         if( support.transitions ) {
-          if( ev.propertyName !== "visibility" ) return;
+          if( ev.propertyName !== 'visibility' ) return;
           this.removeEventListener( transEndEventName, onEndTransitionFn );
         }
-        classie.remove( overlay, "close" );
+        classie.remove( overlay, 'close' );
       };
       if( support.transitions ) {
         overlay.addEventListener( transEndEventName, onEndTransitionFn );
@@ -116,78 +116,78 @@ if ( typeof define === "function" && define.amd ) {
         onEndTransitionFn();
       }
     }
-    else if( !classie.has( overlay, "close" ) ) {
-      classie.add( overlay, "open" );
+    else if( !classie.has( overlay, 'close' ) ) {
+      classie.add( overlay, 'open' );
     }
   }
 
-  triggerBttn.addEventListener( "click", toggleOverlay );
-  closeBttn.addEventListener( "click", toggleOverlay );
+  triggerBttn.addEventListener( 'click', toggleOverlay );
+  closeBttn.addEventListener( 'click', toggleOverlay );
 })();
 
 // drop-down script
 
-$(".expand").click(function(){
-	$(".expansion").hide("slow");
-	var id = $(this).attr("id");
-	if ($(".expansion#"+id).is(":hidden")) {
-		$(".expansion#"+id).show("slow")
+$('.expand').click(function(){
+	$('.expansion').hide('slow');
+	var id = $(this).attr('id');
+	if ($('.expansion#'+id).is(':hidden')) {
+		$('.expansion#'+id).show('slow')
 	};
 });
 
-$(".expansion").click(function(){
-	if ($(".expansion").is(":visible")) {
-		var id = $(this).attr("id");
-		$(".expansion#"+id).hide("slow")
+$('.expansion').click(function(){
+	if ($('.expansion').is(':visible')) {
+		var id = $(this).attr('id');
+		$('.expansion#'+id).hide('slow')
 	};
 });
 
-jQuery(document).ready(function ($) {
+// jQuery(document).ready(function ($) {
 
-  $("#checkbox").change(function(){
-    setInterval(function () {
-        moveRight();
-    }, 3000);
-  });
+//   $("#checkbox").change(function(){
+//     setInterval(function () {
+//         moveRight();
+//     }, 3000);
+//   });
   
-  var slideCount = $("#slider ul li").length;
-  var slideWidth = $("#slider ul li").width();
-  var slideHeight = $("#slider ul li").height();
-  var sliderUlWidth = slideCount * slideWidth;
+//   var slideCount = $("#slider ul li").length;
+//   var slideWidth = $("#slider ul li").width();
+//   var slideHeight = $("#slider ul li").height();
+//   var sliderUlWidth = slideCount * slideWidth;
   
-  $("#slider").css({ width: slideWidth, height: slideHeight });
+//   $("#slider").css({ width: slideWidth, height: slideHeight });
   
-  $("#slider ul").css({ width: sliderUlWidth, marginLeft: - slideWidth });
+//   $("#slider ul").css({ width: sliderUlWidth, marginLeft: - slideWidth });
   
-    $("#slider ul li:last-child").prependTo("#slider ul");
+//     $("#slider ul li:last-child").prependTo("#slider ul");
 
-    // function moveLeft() {
-    //     $("#slider ul").animate({
-    //         left: + slideWidth
-    //     }, 1000, function () {
-    //         $("#slider ul li:last-child").prependTo("#slider ul");
-    //         $("#slider ul").css("left", ");
-    //     });
-    // };
+//     // function moveLeft() {
+//     //     $("#slider ul").animate({
+//     //         left: + slideWidth
+//     //     }, 1000, function () {
+//     //         $("#slider ul li:last-child").prependTo("#slider ul");
+//     //         $("#slider ul").css("left", ");
+//     //     });
+//     // };
 
-    function moveRight() {
-        $("#slider ul").animate({
-            left: - slideWidth
-        }, 1000, function () {
-            $("#slider ul li:first-child").appendTo("#slider ul");
-            $("#slider ul").css("left", ");
-        });
-    };
+//     function moveRight() {
+//         $("#slider ul").animate({
+//             left: - slideWidth
+//         }, 1000, function () {
+//             $("#slider ul li:first-child").appendTo("#slider ul");
+//             $("#slider ul").css("left", ");
+//         });
+//     };
 
-    // $("a.control_prev").click(function () {
-    //     moveLeft();
-    // });
+//     // $("a.control_prev").click(function () {
+//     //     moveLeft();
+//     // });
 
-    $("a.control_next").click(function () {
-        moveRight();
-    });
+//     $("a.control_next").click(function () {
+//         moveRight();
+//     });
 
-});    
+// });    
 
 
 

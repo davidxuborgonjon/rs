@@ -39,8 +39,8 @@
 
 html {
 	font-family: "Caecilia", "Roboto Slab", serif;
-	cursor: help;
-}
+/*	cursor: help;
+*/}
 
 body {
 	color: #855B69;
@@ -120,8 +120,8 @@ button {
 	background:url("../assets/question.png") no-repeat center center;
 	border: none;
 	outline: none;
-	cursor: crosshair;
-}
+/*	cursor: crosshair;
+*/}
 
 /*section {
 	padding: 3em 2em 5em;
@@ -310,8 +310,8 @@ p.info {
   font-weight: 600;
   font-size: 20px;
   opacity: 0;
-  cursor: crosshair;
-}
+/*  cursor: crosshair;
+*/}
 
 /*a.control_prev:hover,*/ a.control_next:hover {
   opacity: 0;
