@@ -35,15 +35,11 @@
 	font-style: italic;
 }
 
-
-*, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
-.clearfix:before, .clearfix:after { content: ''; display: table; }
-.clearfix:after { clear: both; }
-
 /* general styling */
 
 html {
 	font-family: 'Caecilia', 'Roboto Slab', serif;
+	cursor: help;
 }
 
 body {
@@ -100,14 +96,6 @@ a:hover {
 */	padding:1% 9% 1% 7%;
 }
 
-.expand:hover { 
-    color: #FEBF97;
-}
-
-.done {
-	color:#ab7c8f;
-}
-
 .expansion {
 	display:none;
 	padding:1% 11% 1% 10%;
@@ -117,13 +105,14 @@ a:hover {
 
 
 button {
-	padding: 2%;
+	padding: 0%;
 	margin: 5% 80% 5%;
 	width: 120px;
 	height: 120px;
 	background:url('../assets/question.png') no-repeat center center;
 	border: none;
 	outline: none;
+	cursor: crosshair;
 }
 
 /*section {
@@ -151,7 +140,7 @@ button {
 .overlay .overlay-close {
 	width: 120px;
 	height: 120px;
-	padding: 2%;
+	padding: 0%;
 	margin: 6% 80% 5%;
 	overflow: hidden;
 	border: none;
@@ -271,6 +260,8 @@ p.info {
 		min-height: 34px;
 	}
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 #slider {
   position: relative;
@@ -300,31 +291,30 @@ p.info {
   line-height: 300px;
 }
 
-a.control_prev, a.control_next {
+/*a.control_prev,*/ a.control_next {
   position: absolute;
-  top: 40%;
-  z-index: 999;
+/*  top: 40%;
+*/  z-index: 999;
   display: block;
   padding: 3% 2%;
-  width: auto;
-  height: auto;
-  background: #2a2a2a;
-  color: #fff;
+  width: 500px;
+  height: 300px;
+  color: #000;
   text-decoration: none;
   font-weight: 600;
-  font-size: 10px;
-  opacity: 0.8;
-  cursor: pointer;
+  font-size: 20px;
+  opacity: 0;
+  cursor: crosshair;
 }
 
-a.control_prev:hover, a.control_next:hover {
-  opacity: 1;
+/*a.control_prev:hover,*/ a.control_next:hover {
+  opacity: 0;
   -webkit-transition: all 0.2s ease;
 }
 
-a.control_prev {
+/*a.control_prev {
   border-radius: 0 2px 2px 0;
-}
+}*/
 
 a.control_next {
   right: 0;
@@ -339,3 +329,7 @@ a.control_next {
 }
 
 
+=======
+>>>>>>> parent of 67a53d0... first update
+=======
+>>>>>>> parent of 67a53d0... first update
